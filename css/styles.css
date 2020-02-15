@@ -7,6 +7,9 @@
 
 html {
   font-size: 62.5%; }
+  @media screen and (max-width: 700px) {
+    html {
+      font-size: 45%; } }
 
 body {
   box-sizing: border-box;
@@ -67,6 +70,58 @@ ul {
         .nav ul li svg:hover {
           fill: #00aeff; }
 
+/* Fading animation */
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 3.5s; }
+  @media screen and (max-width: 700px) {
+    .fadeIn {
+      animation-name: fadeInMobile; } }
+
+.slideIn {
+  animation-name: slideIn;
+  animation-duration: 3.5s; }
+
+@keyframes fadeIn {
+  from {
+    transform: scale(1.5) translateX(-15rem);
+    opacity: .4; }
+  to {
+    transform: scale(1);
+    opacity: .9; } }
+
+@keyframes fadeInMobile {
+  from {
+    transform: scale(1.5) translateX(-5rem);
+    opacity: .4; }
+  to {
+    transform: scale(1);
+    opacity: .9; } }
+
+@keyframes fadeRight {
+  from {
+    transform: translateX(50%) scale(1.2);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes fadeTop {
+  from {
+    transform: translateY(-50%) scale(1.2);
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes fadeBottom {
+  from {
+    transform: translateY(50%) scale(1.2);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+
 .showcase {
   height: 100%;
   min-height: 65vh;
@@ -75,8 +130,27 @@ ul {
   .showcase__slide {
     height: 100%;
     min-height: 65rem; }
+    @media screen and (max-width: 700px) {
+      .showcase__slide {
+        text-align: center; } }
     .showcase__slide .btn {
-      margin-top: 2rem; }
+      margin-top: 2rem;
+      animation: fadeBottom 2s .4s ease-in-out forwards;
+      opacity: 0; }
+      @media screen and (max-width: 700px) {
+        .showcase__slide .btn {
+          margin: 4rem auto; } }
+  .showcase__logo {
+    display: inline-block;
+    max-width: 25rem;
+    width: 100%;
+    height: auto;
+    margin-bottom: 4rem;
+    animation: fadeTop 2s .4s ease-in-out forwards;
+    opacity: 0; }
+    @media screen and (max-width: 700px) {
+      .showcase__logo {
+        margin: 0 auto; } }
   .showcase__img img {
     position: absolute;
     object-fit: cover;
@@ -100,7 +174,12 @@ ul {
     .showcase__content h2 {
       font-size: 6rem;
       color: #fff;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      animation: fadeRight 2s ease-in-out forwards;
+      opacity: 0; }
+      @media screen and (max-width: 700px) {
+        .showcase__content h2 {
+          margin: 2rem auto; } }
   .showcase__controls {
     position: absolute;
     top: 50%;
@@ -110,6 +189,9 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media screen and (max-width: 700px) {
+      .showcase__controls {
+        top: 70%; } }
   .showcase__control {
     position: relative;
     z-index: 2000; }
@@ -128,16 +210,58 @@ ul {
       fill: #0e86ca;
       width: 5rem;
       height: 5rem; }
+  .showcase__dots {
+    z-index: 1000;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    /* The dots/bullets/indicators */ }
+    .showcase__dots .dot {
+      cursor: pointer;
+      height: 6px;
+      width: 100px;
+      margin: 0 4px;
+      background-color: #bbb;
+      display: inline-block;
+      transition: background-color 0.6s ease; }
+      .showcase__dots .dot:hover {
+        background-color: #dbdbdb; }
+      .showcase__dots .dot.active {
+        background: #0e86ca; }
 
-/* Fading animation */
-.fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 3.5s; }
-
-@keyframes fadeIn {
-  from {
-    transform: scale(1.5) translateX(-15rem);
-    opacity: .4; }
-  to {
-    transform: scale(1);
-    opacity: .9; } }
+.games {
+  background: url(../img/bgTop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 40rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden; }
+  .games .games-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap; }
+    .games .games-box .game {
+      display: inline-block;
+      position: relative;
+      width: 167px;
+      height: 200px;
+      cursor: pointer;
+      margin: 1rem;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      @media screen and (max-width: 700px) {
+        .games .games-box .game {
+          padding: 7rem 0; } }
+      .games .games-box .game:hover {
+        transform: scale(1.5);
+        z-index: 55555; }
+      .games .games-box .game img {
+        width: 100%; }
