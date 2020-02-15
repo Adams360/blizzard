@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: initial;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+a {
+    color: #262626;
+    text-decoration: none;
+}
+
+.btn {
+    background: #0e86ca;
+    color: #fff;
+    border: 0;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-radius: 2px;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
