@@ -1,23 +1,43 @@
 .nav {
-    background-color: rgba(255, 217, 0, 0.527);
+    background-color: rgba(255, 255, 255, 0.150);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
 
-    padding: 2rem 0;
     &__container {
-        max-width: 80%;
+        max-width: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-    }
+        flex-wrap: wrap;
+        min-height: 4.5rem;
 
+        padding: 0 4rem;
+    }
+    
     ul {
         display: flex;
         align-items: center;
+        padding: 7px 0px;
         li {
             padding: 0 1rem;
 
             a {
-                display: inline-block;
+                color: white;
             }
+        
+            svg {
+                width: 8rem;
+                fill: #0e86ca;
+
+                &:hover {
+                    fill: #00aeff;
+                }
+            }
+
+          
         }
     }
 }

@@ -25,7 +25,10 @@ a {
   border: 0;
   padding: 1rem;
   font-size: 1.8rem;
-  border-radius: 2px; }
+  border-radius: 2px;
+  cursor: pointer; }
+  .btn:hover {
+    background: #00aeff; }
 
 ul {
   list-style: none; }
@@ -36,33 +39,47 @@ ul {
   margin: auto; }
 
 .nav {
-  background-color: rgba(255, 217, 0, 0.527);
-  padding: 2rem 0; }
+  background-color: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2000; }
   .nav__container {
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 4.5rem;
+    padding: 0 4rem; }
   .nav ul {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    padding: 7px 0px; }
     .nav ul li {
       padding: 0 1rem; }
       .nav ul li a {
-        display: inline-block; }
+        color: white; }
+      .nav ul li svg {
+        width: 8rem;
+        fill: #0e86ca; }
+        .nav ul li svg:hover {
+          fill: #00aeff; }
 
 .showcase {
   height: 100%;
   min-height: 65vh;
-  background: red;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .showcase__slide {
     height: 100%;
     min-height: 65rem; }
+    .showcase__slide .btn {
+      margin-top: 2rem; }
   .showcase__img img {
     position: absolute;
     object-fit: cover;
-    height: auto;
     display: block;
     top: 0;
     left: 0;
@@ -70,8 +87,6 @@ ul {
     height: 100%; }
   .showcase__content {
     position: absolute;
-    left: 10%;
-    z-index: 525;
     width: 80%;
     height: 75%;
     left: 50%;
@@ -81,8 +96,7 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-left: 4rem;
-    border: 2px dashed red; }
+    padding-left: 4rem; }
     .showcase__content h2 {
       font-size: 6rem;
       color: #fff;
@@ -97,7 +111,8 @@ ul {
     justify-content: space-between;
     align-items: center; }
   .showcase__control {
-    position: relative; }
+    position: relative;
+    z-index: 2000; }
     .showcase__control button {
       min-width: 4rem;
       height: 10rem;
@@ -105,9 +120,24 @@ ul {
       background-color: rgba(17, 17, 17, 0.473);
       cursor: pointer;
       appearance: none; }
-      .showcase__control button:hover svg {
-        fill: #00aeff; }
+      .showcase__control button:hover {
+        background-color: rgba(17, 17, 17, 0.773); }
+        .showcase__control button:hover svg {
+          fill: #00aeff; }
     .showcase__control svg {
       fill: #0e86ca;
       width: 5rem;
       height: 5rem; }
+
+/* Fading animation */
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 3.5s; }
+
+@keyframes fadeIn {
+  from {
+    transform: scale(1.5) translateX(-15rem);
+    opacity: .4; }
+  to {
+    transform: scale(1);
+    opacity: .9; } }

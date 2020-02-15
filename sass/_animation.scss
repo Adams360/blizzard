@@ -1,0 +1,11 @@
+/* Fading animation */
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 3.5s;
+}
+
+
+@keyframes fadeIn {
+  from {transform: scale(1.5) translateX(-15rem); opacity: .4}
+  to {transform: scale(1); opacity: .9}
+}

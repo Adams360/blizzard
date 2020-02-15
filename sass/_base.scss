@@ -30,6 +30,11 @@ a {
     padding: 1rem;
     font-size: 1.8rem;
     border-radius: 2px;
+    cursor: pointer;
+
+    &:hover {
+        background: #00aeff;
+    }
 }
 
 ul {

@@ -1,18 +1,23 @@
 .showcase {
     height: 100%;
     min-height: 65vh;
-    background: red;
     position: relative;
+    overflow: hidden;
+
     &__slide {
         height: 100%;
         min-height: 65rem;
+
+        .btn {
+            margin-top: 2rem;
+
+        }
     }
 
     &__img {
         img {
             position: absolute;
             object-fit: cover;
-            height: auto;
             display: block;
             top: 0;
             left: 0;
@@ -20,11 +25,9 @@
             height: 100%;
         }
     }
-
+    
     &__content {
         position: absolute;
-        left: 10%;
-        z-index: 525;
         width: 80%;
         height: 75%;
         left: 50%;
@@ -36,7 +39,6 @@
         align-items: flex-start;
         justify-content: center;
         padding-left: 4rem;
-        border: 2px dashed red;
 
         h2 {
             font-size: 6rem;
@@ -52,8 +54,6 @@
         left: 50%;
         width: 90%;
         transform: translate(-50%, -50%);
-
-
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -61,6 +61,7 @@
 
     &__control {
         position: relative;
+        z-index: 2000;
 
         button {
             min-width: 4rem;
@@ -71,6 +72,8 @@
             appearance: none;
 
             &:hover {
+            background-color: rgba(17, 17, 17, 0.773);
+                
                 svg {
                     fill: #00aeff;
                 }

@@ -13,8 +13,8 @@ function currentSlide(n) {
 
 function showSlides(n) {
     let i;
-    const slides = document.querySelectorAll('.slideshow__slide');
-    const dots   = document.querySelectorAll('.slideshow__dot');
+    const slides = document.querySelectorAll('.showcase__slide');
+    const dots   = document.querySelectorAll('.showcase__dot');
 
     console.log(slides);
     console.log(dots);
