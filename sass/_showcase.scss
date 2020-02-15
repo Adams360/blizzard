@@ -4,6 +4,11 @@
     position: relative;
     overflow: hidden;
 
+    
+    @media screen and (max-width: 700px) {
+        min-height: 75vh;
+       }    
+
     &__slide {
         height: 100%;
         min-height: 65rem;

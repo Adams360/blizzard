@@ -127,6 +127,9 @@ ul {
   min-height: 65vh;
   position: relative;
   overflow: hidden; }
+  @media screen and (max-width: 700px) {
+    .showcase {
+      min-height: 75vh; } }
   .showcase__slide {
     height: 100%;
     min-height: 65rem; }
@@ -241,8 +244,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  overflow: hidden; }
+  flex-wrap: wrap; }
   .games .games-box {
     display: flex;
     justify-content: space-around;
